@@ -6,21 +6,23 @@
 ### Getting started:
 Clone the repo, then run:
 
-Android
+
 ```
 npm install
 npm start
+```
+
+Android
+```
 npx react-native run-android
 ```
 
 
 IOS
 ```
-npm install
-npm start
 bundle install
 cd ios && bundle exec pod install && cd ..
-npx react-native run-android
+npx react-native run-ios
 ```
 
 ### Screenshots:
