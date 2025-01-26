@@ -1,6 +1,6 @@
 # Funky Gubbins App
 
-### Vanilla React Native 0.76 app for an online etsy shop, Funky Gubbins.
+### Vanilla React Native 0.76 app for an online shop, Funky Gubbins.
 
 
 ### Getting started:
