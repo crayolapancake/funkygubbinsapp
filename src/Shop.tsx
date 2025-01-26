@@ -30,6 +30,7 @@ const Shop = () => {
   }
 
   const ShopItem = ({ title, image }: ItemProps) => (
+    // todo add onPress to navigate to product page
     <View style={styles.listing}>
       <Image
         style={styles.image}

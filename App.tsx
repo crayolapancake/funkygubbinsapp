@@ -9,6 +9,9 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import Home from './src/Home';
 import Shop from './src/Shop';
+import About from './src/About';
+import MyAccount from './src/MyAccount';
+import Basket from './src/Basket';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -25,12 +28,10 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.black : Colors.white,
   };
 
-  // redux / saga for state management
-  // context api
+  // redux / saga for state management or context api
   // implement typescript
   // add unit tests
   // add local storage (faves list)
-  // etsy api
 
   return (
     <NavigationContainer>
@@ -41,16 +42,16 @@ function App(): React.JSX.Element {
           drawerLabelStyle: {
             color: Colors.dark,
             fontSize: 20,
-            // fontFamily: 'Georgia',
           },
         }}
       >
         <Drawer.Screen name="Home" component={Home} options={{ title: 'Funky Gubbins' }} />
         <Drawer.Screen name="Shop" component={Shop} options={{ title: 'Shop' }} />
-        {/* <Drawer.Screen name="About Us" component={AboutUs} options={{ title: 'About' }}/> */}
+        <Drawer.Screen name="Basket" component={Basket} options={{ title: 'Basket' }} />
+        <Drawer.Screen name="My Account" component={MyAccount} options={{ title: 'My Account' }} />
+        <Drawer.Screen name="About Us" component={About} options={{ title: 'About Us' }} />
       </Drawer.Navigator>
     </NavigationContainer>
-
 
   );
 }

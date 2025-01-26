@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { StyleSheet, StatusBar, Text, View, ScrollView, useColorScheme } from 'react-native';
-import { SafeAreaFrameContext, SafeAreaView } from 'react-native-safe-area-context';
+import React, { useCallback, useEffect, useRef } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import {
   Colors,
@@ -8,9 +8,6 @@ import {
 
 const Home = () => {
   const unmountedRef = useRef(false)
-
-  const [newCustomer, setNewCustomer] = useState(false);
-
   const depenency = true;
 
   useEffect(() => {
@@ -19,7 +16,7 @@ const Home = () => {
     const isNewCustomer = true;
     if (isNewCustomer) {
       // do  a thing
-      setNewCustomer(true);
+      // setNewCustomer(true);
     }
   }, [depenency]);
 
@@ -60,16 +57,18 @@ const Home = () => {
 
   return (
     // todo move safe area to parent
-    <SafeAreaView>
-      <ScrollView>
-        <Text style={styles.header}>Mixed media jewellery</Text>
-        <View style={styles.underline}></View>
-      </ScrollView>
+    <SafeAreaView style={styles.view}>
+      <Text style={styles.header}>Mixed media jewellery</Text>
+      <View style={styles.underline}></View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  view: {
+    flex: 1,
+    marginHorizontal: 12,
+  },
   header: {
     flex: 1,
     fontSize: 14,
