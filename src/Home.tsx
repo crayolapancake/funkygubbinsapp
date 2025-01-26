@@ -7,56 +7,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const Home = () => {
-  const unmountedRef = useRef(false)
-  const depenency = true;
-
-  useEffect(() => {
-    // check if it's a new customer
-
-    const isNewCustomer = true;
-    if (isNewCustomer) {
-      // do  a thing
-      // setNewCustomer(true);
-    }
-  }, [depenency]);
-
-  useEffect(() => {
-    return () => {
-      unmountedRef.current = true
-    }
-
-    // Cleanup logic should stop or undo whatever the setup is doing.
-    return () => {
-      console.log('cleanup here')
-    }
-  }, [])
-
-  const exampleCallback = useCallback(() => {
-    if (true) {
-    }
-  }, [depenency]);
-
-
-  // const exampleUseMemo = useMemo(
-  //   // () => console.log('usememo value here'),
-  //   [depenency],
-  // );
-
-  // todo move theme into context
-  // const isDarkMode = useColorScheme() === 'dark';
-
-  // const statusBarBackgroundStyle = {
-  //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  // };
-
-  // const scrollViewBackgroundStyle = {
-  //   backgroundColor: isDarkMode ? Colors.black : Colors.white,
-  // };
-
-
-
   return (
-    // todo move safe area to parent
     <SafeAreaView style={styles.view}>
       <Text style={styles.header}>Mixed media jewellery</Text>
       <View style={styles.underline}></View>

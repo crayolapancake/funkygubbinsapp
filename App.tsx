@@ -16,6 +16,7 @@ import Basket from './src/Basket';
 
 
 function App(): React.JSX.Element {
+  // todo move theme into context / global
   const isDarkMode = useColorScheme() === 'dark';
   const Drawer = createDrawerNavigator();
 
@@ -28,9 +29,8 @@ function App(): React.JSX.Element {
   };
 
   // redux / saga for state management or context api
-  // implement typescript
   // add unit tests
-  // add local storage (faves list)
+  // add local storage (faves list?)
 
   return (
     <NavigationContainer>
