@@ -3,18 +3,17 @@ import React from 'react';
 import {
   useColorScheme,
 } from 'react-native';
-
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
 import Home from './src/Home';
-import Shop from './src/Shop';
+import Shop from './src/shop/Shop';
 import About from './src/About';
 import MyAccount from './src/MyAccount';
 import Basket from './src/Basket';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';

@@ -5,6 +5,8 @@ import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
 
+import ShopTopBar from './ShopTopBar';
+
 type ItemProps = {
   category: string
   description: string
@@ -16,7 +18,6 @@ type ItemProps = {
 
 const Shop = () => {
   const [shopData, setShopData] = useState<ItemProps[]>([])
-  // todo filter, sort, product count, search
 
   useEffect(() => {
     // todo replace dummy API with Etsy API
@@ -44,7 +45,7 @@ const Shop = () => {
 
   return (
     <SafeAreaView style={styles.view}>
-      <Text style={styles.topBar}>Search, Filter, Sort By, Product Count</Text>
+      <ShopTopBar count={shopData.length} />
       <ScrollView>
         {shopData.length > 0 && (
           <FlatList
@@ -64,9 +65,6 @@ const styles = StyleSheet.create({
   view: {
     flex: 1,
     marginHorizontal: 12,
-  },
-  topBar: {
-    marginVertical: 24,
   },
   flatlist: {
     flexDirection: 'column',
